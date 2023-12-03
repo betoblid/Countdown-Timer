@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    background-image: url("../assets/bottom-image.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.alert-mensagns{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background: #858585;
+    width: 300px;
+    color: white;
+    border-radius: 6px;
+}
+.alert-mensagns p{
+    font: 500 15px 'Poppins', sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+.card-load{
+    height: 5px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+
+}
+.load-time{
+    background: blue;
+    height: 5px;
+    border-radius: 15px;
+    animation: 4s loadMensagem linear infinite;
+}
+
+/* kayframe de load no time da mensagem onde o width grecerá na mensagem */
+
+@keyframes loadMensagem {
+    to{
+        width: 0%;
+    }
+    from{
+        width: 100%;
+    }
+}
+
+.container-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/top-image.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+.card-time {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.card-time h1 {
+    color: #6C63FF;
+    font: 700 36px 'Poppins', sans-serif;
+    text-shadow: 0 0 2px #000;
+}
+
+.card-time p {color: #9C9AB6; font: 400 14px 'Poppins', sans-serif;}
+.card-time button {
+    background: #6C63FF;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
+    font: 400 16px 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.card-logo img { width: 90%;}
+.box-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.box-time p { font: 700 40px 'Poppins', sans-serif; color: #000;}
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.time p {  color: #C8C8C8; font: 300 14px 'Poppins', sans-serif;}
+.time span { font: 400 72px 'Poppins', sans-serif;}
+
+
+/* Estilo do pop-up cadastro */
+#pop-up-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pop-up-cadastro form{
+    position: absolute;
+    top: 30%;
+    width: 450px;
+    background-image: linear-gradient(to left, #001330, #001f65, #00279b, #0025cf, #2900ff);
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #001330;
+}
+.btn-close{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font: 700 18px 'Poppins';
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}
+.form-pop-up{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-pop-up label{
+    font: 400 16px 'Poppins';
+    margin-top: 10px;
+    color: white;
+}
+.form-pop-up input{
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding: 6px;
+    margin: 0 auto;
+    outline: none;
+    color: white;
+    font: 500 14px 'Poppins';
+}
+.btn-envia{
+    margin-top: 20px;
+    border: none;
+    padding: 10px 0;
+    font: 600 14px 'Poppins';
+    color: white;
+    background: #6C63FF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* class manipulada pelo js */
+.off{
+    display: none;
+}
+@media(max-width: 1000px) {
+    .container-conteudo { flex-direction: column-reverse;  }
+
+    .card-logo img {  width: 100%; }
+    .time span{font-size: 60px;}
+}
+@media(min-width: 1440px) {
+
+    .card-time h1 {  font-size: 60px; }
+
+    .card-time p { font-size: 24px; }
+
+    .card-time button { font-size: 20px; }
+
+    .card-logo img { width: 100%; }
+
+    .box-time p { font-size: 50px; }
+
+    .time p {  font-size: 26px; }
+
+    .time span { font-size: 92px;}
+}

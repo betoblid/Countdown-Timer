@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="herbert souza" />
+    <meta name="description" content="lançamento de  nossos serviços em breve se Inscreva-se para proveitar nossos serviços" />
+    <meta name="robots" content="index follow" />
+    <meta name="keyword" content="herbert, countdown timer, novos serviços, promoção de novas lojas"/>
+    <title>countdown timer</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body onload="DateTime()">
+    <main>
+        <section class="off" id="pop-up-alert">
+            <p id="mensagem">Avisos</p>
+            <div class="card-load"><div class="load-time"></div></div>
+        </section>
+        <div class="container-conteudo">
+            <div class="card-time">
+                <h1>Ready to launch in...</h1>
+                <div class="box-time" title="time">
+                    <div class="time">
+                        <p>Dia</p>
+                        <span id="day" title="dias"></span>
+                    </div>
+                    <p>:</p>
+                    <div class="time">
+                        <p>Horas</p>
+                        <span id="hors" title="horas"></span>
+                    </div>
+                    <p>
+                        :
+                    </p>
+                    <div class="time">
+                        <p>Minutos</p>
+                        <span id="minut" title="minutos"></span>
+                       
+                    </div>
+                    <p>
+                        :
+                    </p>
+                    <div class="time">
+                        <p>Segundos</p>
+                        <span id="second" title="segundos"></span>
+                    </div>
+                </div>
+
+                <p>Inscreva-se para saber mais sobre o lançamento</p>
+                <button id="inscrever" title="Inscreva-se">Inscreva-se</button>
+            </div>
+
+            <div class="card-logo">
+                <img src="assets/rocket.svg" alt="logo de nosso site" title="rocket">
+            </div>
+        </div>
+        <div class="" id="pop-up-cadastro">
+            
+            <form id="form-cadastro" action="" class="off">
+                <button type="button" class="btn-close" id="close">x</button>
+                <label for="cxnome" title="nome">Nome:</label>
+                <input type="text" name="cxnome" id="cxnome" minlength="7" placeholder="Digite seu nome" required title="preencha esse campo com seu nome">
+
+                <label for="cxemail" title="email">Email:</label>
+                <input type="email" name="cxemail" id="cxemail" placeholder="Digite um email" onblur="validaremail(this.value)" title="preencha esse campo com seu email">
+
+                <label for="cxtel" title="telefone">Telefone:</label>
+                <input type="tel" maxlength="11" id="cxtel" placeholder="(11)94356-5476" required title="preencha esse campo com seu telefone">
+
+                <button type="submit" class="btn-envia" id="concluido" onclick="enviarDados(event)" title="Enviar">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
